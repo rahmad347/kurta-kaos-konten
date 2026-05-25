@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strategi Konten Kurta Kaos</title>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family: 'Segoe UI', sans-serif; background: #f5f5f5; color: #222; }
@@ -29,7 +30,6 @@ body { font-family: 'Segoe UI', sans-serif; background: #f5f5f5; color: #222; }
 .panel { display: none; padding: 20px 16px; }
 .panel.active { display: block; }
 
-/* Cards */
 .card {
   background: #fff; border-radius: 10px; padding: 18px;
   margin-bottom: 14px; box-shadow: 0 1px 4px rgba(0,0,0,0.07);
@@ -70,7 +70,6 @@ body { font-family: 'Segoe UI', sans-serif; background: #f5f5f5; color: #222; }
 .content-type p { font-size: 11.5px; color: #555; line-height: 1.6; }
 .content-type .hook { font-size: 11px; background: #e8f0fe; color: #1a237e; padding: 6px 10px; border-radius: 4px; margin-top: 6px; font-style: italic; }
 
-/* Kalender */
 .week-label { font-size: 11px; font-weight: bold; color: #888; text-transform: uppercase; letter-spacing: 1px; margin: 16px 0 8px; }
 .day-row {
   display: grid; grid-template-columns: 70px 1fr; gap: 8px;
@@ -84,7 +83,6 @@ body { font-family: 'Segoe UI', sans-serif; background: #f5f5f5; color: #222; }
 .day-content .platform.both { color: #1565c0; }
 .day-content p { font-size: 11.5px; color: #444; }
 
-/* Caption */
 .caption-box {
   background: #f8f9fa; border: 1px solid #e0e0e0;
   border-radius: 8px; padding: 14px; margin-bottom: 12px;
@@ -99,7 +97,6 @@ body { font-family: 'Segoe UI', sans-serif; background: #f5f5f5; color: #222; }
 .copy-btn:hover { background: #0f3460; }
 .copy-btn.copied { background: #2e7d32; }
 
-/* Hashtag */
 .hashtag-group { margin-bottom: 14px; }
 .hashtag-group h4 { font-size: 11px; font-weight: bold; color: #1a1a2e; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
 .hashtag-wrap { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -110,13 +107,11 @@ body { font-family: 'Segoe UI', sans-serif; background: #f5f5f5; color: #222; }
 }
 .htag:hover { background: #1565c0; color: #fff; }
 
-/* Tips */
 .tip-item { display: flex; gap: 10px; padding: 10px 0; border-bottom: 1px dashed #eee; }
 .tip-item:last-child { border-bottom: none; }
 .tip-num { width: 24px; height: 24px; background: #1a1a2e; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: bold; flex-shrink: 0; }
 .tip-item p { font-size: 12px; color: #444; line-height: 1.6; }
 
-/* Stat bar */
 .stat-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
 .stat-label { font-size: 11px; color: #555; width: 120px; }
 .stat-bar-wrap { flex: 1; height: 8px; background: #eee; border-radius: 4px; margin: 0 10px; }
@@ -132,16 +127,15 @@ body { font-family: 'Segoe UI', sans-serif; background: #f5f5f5; color: #222; }
 </div>
 
 <div class="tabs">
-  <div class="tab active" onclick="switchTab('ide')">💡 Ide Konten</div>
-  <div class="tab" onclick="switchTab('kalender')">📅 Kalender</div>
-  <div class="tab" onclick="switchTab('caption')">✍️ Caption</div>
-  <div class="tab" onclick="switchTab('hashtag')">#️⃣ Hashtag</div>
-  <div class="tab" onclick="switchTab('tips')">🚀 Tips</div>
+  <div class="tab active" onclick="switchTab('ide', this)">💡 Ide Konten</div>
+  <div class="tab" onclick="switchTab('kalender', this)">📅 Kalender</div>
+  <div class="tab" onclick="switchTab('caption', this)">✍️ Caption</div>
+  <div class="tab" onclick="switchTab('hashtag', this)">#️⃣ Hashtag</div>
+  <div class="tab" onclick="switchTab('tips', this)">🚀 Tips</div>
 </div>
 
 <!-- IDE KONTEN -->
 <div id="panel-ide" class="panel active">
-
   <div class="card">
     <div class="card-header">
       <div class="icon tiktok">🎵</div>
@@ -150,31 +144,26 @@ body { font-family: 'Segoe UI', sans-serif; background: #f5f5f5; color: #222; }
         <div class="card-sub">Format video pendek 15–60 detik · Utamakan hook 3 detik pertama</div>
       </div>
     </div>
-
     <div class="content-type">
       <h4>1. Unboxing & Review Produk</h4>
       <p>Video membuka paket, memperlihatkan detail kain, jahitan, dan potongan kurta. Soroti bahan combed 30s yang adem dan lembut.</p>
       <div class="hook">🎬 Hook: "Kaos kurta Rp 89rb tapi kualitasnya kayak gini?!"</div>
     </div>
-
     <div class="content-type">
       <h4>2. OOTD / Styling Kurta</h4>
       <p>Tampilkan berbagai mix & match kurta — pakai celana cargo, jogger, atau sarung. Tunjukkan kurta cocok untuk ngaji, nongkrong, dan kerja santai.</p>
       <div class="hook">🎬 Hook: "3 gaya pakai kurta kaos yang bisa kamu coba hari ini"</div>
     </div>
-
     <div class="content-type">
       <h4>3. Behind The Scenes (BTS)</h4>
       <p>Proses packing, pemasangan label, pemilihan warna. Konten ini membangun kepercayaan dan kesan brand yang serius.</p>
       <div class="hook">🎬 Hook: "Begini cara kami packing biar sampai dengan sempurna"</div>
     </div>
-
     <div class="content-type">
       <h4>4. Before & After / Perbandingan</h4>
       <p>Bandingkan kurta kamu vs kaos biasa. Tunjukkan perbedaan panjang, potongan, dan kesan tampilan secara visual.</p>
       <div class="hook">🎬 Hook: "Ini bedanya kaos biasa vs kurta — kamu pilih mana?"</div>
     </div>
-
     <div class="content-type">
       <h4>5. Testimoni & Review Pembeli</h4>
       <p>Minta pembeli pertama untuk kirim video/foto pakai produk. Repost dengan izin mereka sebagai bukti sosial.</p>
@@ -190,22 +179,18 @@ body { font-family: 'Segoe UI', sans-serif; background: #f5f5f5; color: #222; }
         <div class="card-sub">Feed · Reels · Story · Highlights</div>
       </div>
     </div>
-
     <div class="content-type">
       <h4>1. Feed — Foto Produk Estetik</h4>
       <p>Foto flat lay di atas kain linen, foto model outdoor, atau close-up tekstur kain. Konsisten 1 tone warna (dark mode atau earth tone).</p>
     </div>
-
     <div class="content-type">
       <h4>2. Reels — Konten Sama Seperti TikTok</h4>
       <p>Cross-post video TikTok ke Reels. Hapus watermark TikTok dulu menggunakan SnapTik atau SSSTiktok.</p>
     </div>
-
     <div class="content-type">
       <h4>3. Story — Interaksi Harian</h4>
       <p>Polling warna favorit, tanya ukuran yang sering dicari, countdown PO, behind the scenes. Story menjaga akun tetap aktif di algoritma.</p>
     </div>
-
     <div class="content-type">
       <h4>4. Highlights — Etalase Produk</h4>
       <p>Buat kategori: Produk, Size Guide, Cara Order, Testimoni, FAQ. Ini seperti landing page mini di Instagram.</p>
@@ -223,104 +208,65 @@ body { font-family: 'Segoe UI', sans-serif; background: #f5f5f5; color: #222; }
         <div class="card-sub">Posting konsisten minimal 5x seminggu</div>
       </div>
     </div>
-
     <div class="week-label">Minggu 1 — Perkenalan Brand</div>
-
     <div class="day-row">
       <div class="day-name">Senin</div>
-      <div class="day-content">
-        <div class="platform both">TikTok + IG Reels</div>
-        <p>Perkenalan brand — "Kami hadir untuk kamu yang suka tampil rapi tapi tetap santai"</p>
-      </div>
+      <div class="day-content"><div class="platform both">TikTok + IG Reels</div><p>Perkenalan brand — "Kami hadir untuk kamu yang suka tampil rapi tapi tetap santai"</p></div>
     </div>
     <div class="day-row">
       <div class="day-name">Selasa</div>
-      <div class="day-content">
-        <div class="platform ig">Instagram</div>
-        <p>Feed foto produk kurta — flat lay estetik + caption penjelasan bahan combed 30s</p>
-      </div>
+      <div class="day-content"><div class="platform ig">Instagram</div><p>Feed foto produk kurta — flat lay estetik + caption penjelasan bahan combed 30s</p></div>
     </div>
     <div class="day-row">
       <div class="day-name">Rabu</div>
-      <div class="day-content">
-        <div class="platform tt">TikTok</div>
-        <p>Video OOTD styling kurta — 3 cara pakai dalam 30 detik</p>
-      </div>
+      <div class="day-content"><div class="platform tt">TikTok</div><p>Video OOTD styling kurta — 3 cara pakai dalam 30 detik</p></div>
     </div>
     <div class="day-row">
       <div class="day-name">Kamis</div>
-      <div class="day-content">
-        <div class="platform ig">Instagram Story</div>
-        <p>Polling: "Warna apa yang kamu mau?" + countdown buka PO</p>
-      </div>
+      <div class="day-content"><div class="platform ig">Instagram Story</div><p>Polling: "Warna apa yang kamu mau?" + countdown buka PO</p></div>
     </div>
     <div class="day-row">
       <div class="day-name">Jumat</div>
-      <div class="day-content">
-        <div class="platform both">TikTok + IG Reels</div>
-        <p>Video BTS packing + pasang label brand — bangun kepercayaan</p>
-      </div>
+      <div class="day-content"><div class="platform both">TikTok + IG Reels</div><p>Video BTS packing + pasang label brand — bangun kepercayaan</p></div>
     </div>
     <div class="day-row">
       <div class="day-name">Sabtu</div>
-      <div class="day-content">
-        <div class="platform tt">TikTok</div>
-        <p>Konten edukatif: "Bedanya combed 20s, 24s, dan 30s" — positioning sebagai brand yang tahu kualitas</p>
-      </div>
+      <div class="day-content"><div class="platform tt">TikTok</div><p>Konten edukatif: "Bedanya combed 20s, 24s, dan 30s"</p></div>
     </div>
     <div class="day-row">
       <div class="day-name">Minggu</div>
-      <div class="day-content">
-        <div class="platform ig">Instagram</div>
-        <p>Feed foto model pakai kurta outdoor / casual + promo buka PO</p>
-      </div>
+      <div class="day-content"><div class="platform ig">Instagram</div><p>Feed foto model pakai kurta outdoor / casual + promo buka PO</p></div>
     </div>
-
     <div class="week-label">Minggu 2 — Buka Pre-Order</div>
-
     <div class="day-row">
       <div class="day-name">Senin</div>
-      <div class="day-content">
-        <div class="platform both">TikTok + IG</div>
-        <p>🔥 Pengumuman BUKA PRE-ORDER — tunjukkan semua pilihan warna + harga</p>
-      </div>
+      <div class="day-content"><div class="platform both">TikTok + IG</div><p>🔥 Pengumuman BUKA PRE-ORDER — tunjukkan semua pilihan warna + harga</p></div>
     </div>
     <div class="day-row">
       <div class="day-name">Rabu</div>
-      <div class="day-content">
-        <div class="platform tt">TikTok</div>
-        <p>Video unboxing sample produk — detail jahitan, label, kemasan</p>
-      </div>
+      <div class="day-content"><div class="platform tt">TikTok</div><p>Video unboxing sample produk — detail jahitan, label, kemasan</p></div>
     </div>
     <div class="day-row">
       <div class="day-name">Jumat</div>
-      <div class="day-content">
-        <div class="platform both">TikTok + IG Story</div>
-        <p>Reminder PO hampir tutup + tunjukkan berapa yang sudah order</p>
-      </div>
+      <div class="day-content"><div class="platform both">TikTok + IG Story</div><p>Reminder PO hampir tutup + tunjukkan berapa yang sudah order</p></div>
     </div>
     <div class="day-row">
       <div class="day-name">Minggu</div>
-      <div class="day-content">
-        <div class="platform ig">Instagram</div>
-        <p>TUTUP PRE-ORDER + ucapan terima kasih + update proses produksi</p>
-      </div>
+      <div class="day-content"><div class="platform ig">Instagram</div><p>TUTUP PRE-ORDER + ucapan terima kasih + update proses produksi</p></div>
     </div>
   </div>
 </div>
 
 <!-- CAPTION -->
 <div id="panel-caption" class="panel">
-
   <div class="card">
     <div class="card-header">
       <div class="icon orange">✍️</div>
       <div>
         <div class="card-title">Template Caption Siap Pakai</div>
-        <div class="card-sub">Klik "Salin" untuk copy caption ke clipboard</div>
+        <div class="card-sub">Klik "Salin" untuk copy caption</div>
       </div>
     </div>
-
     <div class="caption-label">Caption #1 — Perkenalan Produk</div>
     <div class="caption-box" id="cap1">Tampil rapi nggak harus ribet. 👕
 
@@ -337,9 +283,8 @@ PRE-ORDER dibuka segera! Stay tune ya guys 🔥
 
 DM atau klik link di bio untuk info lengkap 👆</div>
     <button class="copy-btn" onclick="copyCaption('cap1', this)">📋 Salin Caption</button>
-  </div>
 
-  <div class="card">
+    <br><br>
     <div class="caption-label">Caption #2 — Buka Pre-Order</div>
     <div class="caption-box" id="cap2">🚨 PRE-ORDER RESMI DIBUKA!
 
@@ -362,19 +307,14 @@ Cara Order:
 
 💬 Ada pertanyaan? DM kami sekarang, fast respon!</div>
     <button class="copy-btn" onclick="copyCaption('cap2', this)">📋 Salin Caption</button>
-  </div>
 
-  <div class="card">
-    <div class="caption-label">Caption #3 — Konten Edukatif (Engagement)</div>
+    <br><br>
+    <div class="caption-label">Caption #3 — Konten Edukatif</div>
     <div class="caption-box" id="cap3">Tau nggak bedanya Combed 20s, 24s, sama 30s? 🧵
 
-Banyak yang salah kaprah soal ini. Yuk kita bahas simpel!
-
-🔹 Combed 20s — Tebal, cocok untuk kaos distro. Agak berat tapi tahan lama.
-
-🔹 Combed 24s — Standar paling umum. Seimbang antara ketebalan dan kenyamanan.
-
-🔹 Combed 30s — Tipis, ringan, adem. Paling enak dipakai harian di cuaca panas. Pilihan kami! ✅
+🔹 Combed 20s — Tebal, cocok untuk kaos distro.
+🔹 Combed 24s — Standar umum, seimbang antara tebal dan nyaman.
+🔹 Combed 30s — Tipis, ringan, adem. Paling enak dipakai harian. ✅
 
 Itu kenapa [NAMA BRAND] pilih Combed 30s — karena Indonesia itu panas, dan kamu harus tetap nyaman seharian 🌤️
 
@@ -383,7 +323,6 @@ Setuju? Drop 🔥 di kolom komentar!
 #kaos #kurta #infofashion #combedkaos</div>
     <button class="copy-btn" onclick="copyCaption('cap3', this)">📋 Salin Caption</button>
   </div>
-
 </div>
 
 <!-- HASHTAG -->
@@ -393,13 +332,12 @@ Setuju? Drop 🔥 di kolom komentar!
       <div class="icon purple">#️⃣</div>
       <div>
         <div class="card-title">Hashtag Strategis</div>
-        <div class="card-sub">Gunakan campuran besar + medium + niche · Klik untuk copy</div>
+        <div class="card-sub">Klik hashtag untuk copy</div>
       </div>
     </div>
-
     <div class="hashtag-group">
-      <h4>🔥 Hashtag Besar (Jangkauan Luas)</h4>
-      <div class="hashtag-wrap" id="hg1">
+      <h4>🔥 Hashtag Besar</h4>
+      <div class="hashtag-wrap">
         <span class="htag" onclick="copyHashtag(this)">#kaos</span>
         <span class="htag" onclick="copyHashtag(this)">#fashion</span>
         <span class="htag" onclick="copyHashtag(this)">#ootd</span>
@@ -410,9 +348,8 @@ Setuju? Drop 🔥 di kolom komentar!
         <span class="htag" onclick="copyHashtag(this)">#streetwear</span>
       </div>
     </div>
-
     <div class="hashtag-group">
-      <h4>🎯 Hashtag Niche (Lebih Targeted)</h4>
+      <h4>🎯 Hashtag Niche</h4>
       <div class="hashtag-wrap">
         <span class="htag" onclick="copyHashtag(this)">#kurta</span>
         <span class="htag" onclick="copyHashtag(this)">#kurtakaos</span>
@@ -425,7 +362,6 @@ Setuju? Drop 🔥 di kolom komentar!
         <span class="htag" onclick="copyHashtag(this)">#combed30s</span>
       </div>
     </div>
-
     <div class="hashtag-group">
       <h4>🛍️ Hashtag Jualan</h4>
       <div class="hashtag-wrap">
@@ -438,9 +374,8 @@ Setuju? Drop 🔥 di kolom komentar!
         <span class="htag" onclick="copyHashtag(this)">#grosirkaos</span>
       </div>
     </div>
-
     <div class="hashtag-group">
-      <h4>📍 Hashtag Lokal (Yogyakarta)</h4>
+      <h4>📍 Hashtag Lokal Jogja</h4>
       <div class="hashtag-wrap">
         <span class="htag" onclick="copyHashtag(this)">#jogja</span>
         <span class="htag" onclick="copyHashtag(this)">#yogyakarta</span>
@@ -450,10 +385,9 @@ Setuju? Drop 🔥 di kolom komentar!
         <span class="htag" onclick="copyHashtag(this)">#produkjogja</span>
       </div>
     </div>
-
     <div style="margin-top:14px; padding:12px; background:#e8f0fe; border-radius:8px;">
       <p style="font-size:11.5px; color:#1565c0; line-height:1.7;">
-        💡 <strong>Rumus hashtag ideal:</strong> Gunakan 3–5 hashtag besar + 3–5 hashtag niche + 2–3 hashtag lokal per postingan. Total 8–13 hashtag sudah cukup. Jangan spam 30 hashtag — bisa terdeteksi sebagai spam oleh algoritma.
+        💡 <strong>Rumus hashtag ideal:</strong> 3–5 hashtag besar + 3–5 niche + 2–3 lokal per postingan. Total 8–13 hashtag sudah cukup.
       </p>
     </div>
   </div>
@@ -461,7 +395,6 @@ Setuju? Drop 🔥 di kolom komentar!
 
 <!-- TIPS -->
 <div id="panel-tips" class="panel">
-
   <div class="card">
     <div class="card-header">
       <div class="icon green">📊</div>
@@ -470,7 +403,6 @@ Setuju? Drop 🔥 di kolom komentar!
         <div class="card-sub">Berdasarkan pola audiens Indonesia</div>
       </div>
     </div>
-
     <div class="stat-row"><div class="stat-label">Pagi (06–08)</div><div class="stat-bar-wrap"><div class="stat-bar" style="width:60%"></div></div><div class="stat-val">⭐⭐⭐</div></div>
     <div class="stat-row"><div class="stat-label">Siang (11–13)</div><div class="stat-bar-wrap"><div class="stat-bar" style="width:75%"></div></div><div class="stat-val">⭐⭐⭐⭐</div></div>
     <div class="stat-row"><div class="stat-label">Sore (16–18)</div><div class="stat-bar-wrap"><div class="stat-bar" style="width:90%"></div></div><div class="stat-val">⭐⭐⭐⭐⭐</div></div>
@@ -486,25 +418,23 @@ Setuju? Drop 🔥 di kolom komentar!
         <div class="card-sub">Strategi organik tanpa iklan berbayar</div>
       </div>
     </div>
-
-    <div class="tip-item"><div class="tip-num">1</div><p><strong>Hook 3 detik pertama</strong> — Mulai video dengan pertanyaan atau visual yang mengejutkan. Contoh: langsung tunjukkan produk close-up tanpa intro panjang.</p></div>
+    <div class="tip-item"><div class="tip-num">1</div><p><strong>Hook 3 detik pertama</strong> — Mulai video dengan pertanyaan atau visual mengejutkan. Langsung tunjukkan produk close-up tanpa intro panjang.</p></div>
     <div class="tip-item"><div class="tip-num">2</div><p><strong>Suara trending</strong> — Gunakan audio yang sedang viral di TikTok/Reels untuk meningkatkan distribusi konten secara organik.</p></div>
-    <div class="tip-item"><div class="tip-num">3</div><p><strong>Balas komentar dengan video</strong> — Fitur "Reply with Video" di TikTok sangat efektif untuk membangun interaksi dan muncul di FYP lebih sering.</p></div>
-    <div class="tip-item"><div class="tip-num">4</div><p><strong>Konsisten minimal 1x/hari</strong> — Algoritma TikTok sangat memperhatikan konsistensi. Akun yang posting rutin dapat distribusi lebih luas.</p></div>
-    <div class="tip-item"><div class="tip-num">5</div><p><strong>Stitch & Duet</strong> — Gunakan fitur Stitch untuk merespons konten relevan (misal video fashion pria). Cara ini efektif menjangkau audiens baru.</p></div>
-    <div class="tip-item"><div class="tip-num">6</div><p><strong>Akun TikTok & IG terpisah untuk brand</strong> — Jangan campur akun personal dan bisnis. Buat akun bisnis dari awal agar bisa akses analitik dan fitur iklan.</p></div>
-    <div class="tip-item"><div class="tip-num">7</div><p><strong>Cross-post semua konten</strong> — Satu video = upload ke TikTok, IG Reels, dan YouTube Shorts sekaligus. Jangkauan 3x lipat dengan usaha yang sama.</p></div>
+    <div class="tip-item"><div class="tip-num">3</div><p><strong>Balas komentar dengan video</strong> — Fitur "Reply with Video" di TikTok sangat efektif untuk membangun interaksi dan muncul di FYP.</p></div>
+    <div class="tip-item"><div class="tip-num">4</div><p><strong>Konsisten minimal 1x/hari</strong> — Algoritma TikTok sangat memperhatikan konsistensi posting rutin.</p></div>
+    <div class="tip-item"><div class="tip-num">5</div><p><strong>Stitch & Duet</strong> — Gunakan fitur Stitch untuk merespons konten relevan agar menjangkau audiens baru.</p></div>
+    <div class="tip-item"><div class="tip-num">6</div><p><strong>Akun bisnis terpisah</strong> — Jangan campur akun personal dan bisnis. Buat akun bisnis dari awal untuk akses analitik.</p></div>
+    <div class="tip-item"><div class="tip-num">7</div><p><strong>Cross-post semua konten</strong> — Satu video = upload ke TikTok, IG Reels, dan YouTube Shorts sekaligus untuk jangkauan 3x lipat.</p></div>
   </div>
 </div>
 
 <script>
-function switchTab(name) {
+function switchTab(name, el) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-  event.target.classList.add('active');
+  el.classList.add('active');
   document.getElementById('panel-' + name).classList.add('active');
 }
-
 function copyCaption(id, btn) {
   const text = document.getElementById(id).innerText;
   navigator.clipboard.writeText(text).then(() => {
@@ -513,16 +443,13 @@ function copyCaption(id, btn) {
     setTimeout(() => { btn.textContent = '📋 Salin Caption'; btn.classList.remove('copied'); }, 2000);
   });
 }
-
 function copyHashtag(el) {
   navigator.clipboard.writeText(el.textContent).then(() => {
-    const orig = el.style.background;
     el.style.background = '#1565c0';
     el.style.color = '#fff';
     setTimeout(() => { el.style.background = ''; el.style.color = ''; }, 1000);
   });
 }
 </script>
-
 </body>
 </html>
